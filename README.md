@@ -17,9 +17,9 @@ class Book:
         self.type = type
 
     def get_global_feeling(self):
-        if Book.TYPES.ROMANCE:
+        if self.type == Book.TYPES.ROMANCE:
             return 'love'
-        if Book.TYPES.ACTION:
+        if self.type == Book.TYPES.ACTION:
             return 'intensity'
 ```
 
