@@ -1,4 +1,3 @@
-# TODO: extract this class to a dedicated self-hosted repository
 class ConstantsSet(set):
     def to_choices(self):
         return tuple((name, name) for name in sorted(self))
