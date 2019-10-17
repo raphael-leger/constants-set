@@ -26,22 +26,17 @@ class Book:
 
 ### Django model
 ```python
-from constants_set import ConstantsSet
 from django.db import models
 
 
-class Book(models.Model):
-    TYPES = ConstantsSet(["ROMANCE", "ACTION"])
-
-    type = models.CharField(max_length=30, choices=TYPES.to_choices(), default=TYPES.ROMANCE)
+class BookModel(models.Model):
+    type = models.CharField(max_length=30, choices=Book.TYPES.to_choices(), default=Book.TYPES.ROMANCE)
 ```
 
 
 ### Django rest framework serializer
 ```python
-from constants_set import ConstantsSet
 from rest_framework import serializers
-
 
 class BookSerializer(serializers.Serializer):
     type = serializers.ChoiceField(required=True, choices=Book.TYPES.to_choices())
