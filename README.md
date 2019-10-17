@@ -3,6 +3,9 @@
 - Kind of like enums, reusable constants.
 - Kind of convenient for Django and DRF.
 
+## Install
+`pip install constants-set`
+
 ## Use cases
 
 ### Simple python
