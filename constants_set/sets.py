@@ -5,7 +5,7 @@ class ConstantsSet(set):
     def __getattr__(self, name):
         if name in self:
             return name
-        raise AttributeError
+        raise AttributeError(f"{name} not present in the ConstantsSet {self}")
 
     def __str__(self):
         return ", ".join(sorted(self))
